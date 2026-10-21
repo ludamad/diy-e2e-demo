@@ -1,6 +1,11 @@
 {
-  "name": "diy-e2e-demo",
+  "name": "textkit",
   "private": true,
   "type": "module",
-  "scripts": { "test": "node --test" }
+  "scripts": {
+    "test": "node --test"
+  },
+  "bin": {
+    "textkit": "src/cli/index.js"
+  }
 }
