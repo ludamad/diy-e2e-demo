@@ -1,15 +1,20 @@
 // Counts words in text.
 
-// count returns how many words text has: runs of letters between spaces.
+// words returns the words of text: runs of non-space characters, with any
+// run of spaces, tabs or newlines between them.
+function words(text) {
+  return text.split(/\s+/).filter(Boolean);
+}
+
+// count returns how many words text has.
 export function count(text) {
-  if (text === "") return 0;
-  return text.split(" ").length;
+  return words(text).length;
 }
 
 // longest returns the longest word in text, or "" if it has none.
 export function longest(text) {
   let best = "";
-  for (const w of text.split(" ")) {
+  for (const w of words(text)) {
     if (w.length > best.length) best = w;
   }
   return best;
