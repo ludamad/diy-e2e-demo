@@ -1,0 +1,6 @@
+{
+  "name": "diy-e2e-demo",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test" }
+}
